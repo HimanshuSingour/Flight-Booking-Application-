@@ -1,0 +1,19 @@
+server:
+  port: 9300
+  
+spring:
+  application:
+    name: BookingMS
+  cloud:
+    consul:
+      host: localhost
+      discovery:
+        hostname: localhost
+      config:
+        fail-fast: false
+        enabled: true
+        prefix: config
+        defaultContext: application
+        data-key: data
+        profileSeparator: '::'
+        format: YAML
